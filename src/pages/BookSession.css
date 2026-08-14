@@ -1,0 +1,139 @@
+.book-session-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.session-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 17px;
+  color: var(--dark-text);
+}
+
+.session-cta {
+  background-color: var(--light-bg);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.session-cta h3 {
+  font-size: 24px;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+
+.next-steps {
+  list-style: none;
+  counter-reset: step-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.next-steps li {
+  counter-increment: step-counter;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+  color: var(--gray-text);
+}
+
+.next-steps li::before {
+  content: counter(step-counter);
+  width: 32px;
+  height: 32px;
+  background: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.session-form-wrapper .booking-form-card {
+  background: rgba(26, 26, 26, 0.95);
+  max-width: 100%;
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 1024px) {
+  .book-session-grid {
+    gap: 50px;
+  }
+
+  .session-form-wrapper .booking-form-card {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-session-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .benefit-item {
+    font-size: 16px;
+  }
+
+  .session-cta {
+    padding: 28px;
+  }
+
+  .session-cta h3 {
+    font-size: 22px;
+  }
+
+  .next-steps li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-list {
+    gap: 14px;
+  }
+
+  .benefit-item {
+    font-size: 15px;
+  }
+
+  .session-cta {
+    padding: 24px;
+  }
+
+  .session-cta h3 {
+    font-size: 20px;
+  }
+
+  .next-steps li {
+    font-size: 14px;
+  }
+
+  .next-steps li::before {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+}

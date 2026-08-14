@@ -1,0 +1,60 @@
+.courses {
+  background-color: var(--light-bg);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.courses-grid > :nth-child(1),
+.courses-grid > :nth-child(2),
+.courses-grid > :nth-child(3) {
+  grid-column: span 1;
+}
+
+.courses-grid > :nth-child(4),
+.courses-grid > :nth-child(5),
+.courses-grid > :nth-child(6),
+.courses-grid > :nth-child(7) {
+  grid-column: span 1;
+}
+
+/* Adjust grid for second row to have 4 columns */
+@media (min-width: 769px) {
+  .courses-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .courses-grid > :nth-child(1),
+  .courses-grid > :nth-child(2),
+  .courses-grid > :nth-child(3) {
+    grid-column: span 4;
+  }
+
+  .courses-grid > :nth-child(4),
+  .courses-grid > :nth-child(5),
+  .courses-grid > :nth-child(6),
+  .courses-grid > :nth-child(7) {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .courses-grid > * {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

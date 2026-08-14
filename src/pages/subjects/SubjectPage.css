@@ -1,0 +1,260 @@
+.subject-page {
+  min-height: 100vh;
+  background-color: var(--white);
+}
+
+.subject-hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070');
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1a1a;
+  padding: 140px 0 80px;
+  text-align: center;
+}
+
+.subject-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(37, 99, 235, 0.4));
+  z-index: 1;
+}
+
+.subject-hero-content {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subject-hero-title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.subject-hero-description {
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  opacity: 0.95;
+}
+
+.subject-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+}
+
+.subject-main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.subject-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+
+.subject-subsection-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-top: 20px;
+}
+
+.subject-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--gray-text);
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: var(--dark-text);
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.info-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-card h4 {
+  font-size: 18px;
+  color: var(--dark-text);
+  margin-top: 8px;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.subject-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+}
+
+.sidebar-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+
+.subjects-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subjects-list li {
+  padding: 10px 14px;
+  background: var(--light-bg);
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--dark-text);
+  font-weight: 500;
+}
+
+.exam-boards-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exam-boards-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--dark-text);
+}
+
+.cta-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  color: var(--white);
+}
+
+.cta-card h3 {
+  color: var(--white);
+}
+
+.cta-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .subject-content-grid {
+    gap: 50px;
+  }
+
+  .subject-hero-title {
+    font-size: 44px;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .subject-hero {
+    padding: 120px 0 60px;
+  }
+
+  .subject-hero-title {
+    font-size: 36px;
+  }
+
+  .subject-hero-description {
+    font-size: 18px;
+  }
+
+  .subject-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .subject-section-title {
+    font-size: 30px;
+  }
+
+  .subject-subsection-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subject-hero-title {
+    font-size: 32px;
+  }
+
+  .subject-hero-description {
+    font-size: 16px;
+  }
+
+  .subject-section-title {
+    font-size: 26px;
+  }
+
+  .subject-subsection-title {
+    font-size: 22px;
+  }
+
+  .subject-text {
+    font-size: 16px;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+}
