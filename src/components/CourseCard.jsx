@@ -7,16 +7,16 @@ const CourseCard = ({ title, image, size = 'medium' }) => {
   // Map course titles to routes
   const getRouteFromTitle = (title) => {
     const routeMap = {
-      'A/AS Level': '/subjects/as-level',
-      'AP Courses': '/subjects/ap-courses',
-      'NEET Course': '/subjects/neet',
-      'CBSE Course': '/subjects/cbse',
-      'IB Course': '/subjects/ib',
-      'IGCSE/GCSE': '/subjects/igcse',
-      'JEE Mains Course': '/subjects/jee',
-      'MCAT Course': '/subjects/mcat'
+      'A/AS Level': '/courses/as-level',
+      'AP Courses': '/courses/ap-courses',
+      'NEET Course': '/courses/neet',
+      'CBSE Course': '/courses/cbse',
+      'IB Course': '/courses/ib',
+      'IGCSE/GCSE': '/courses/igcse',
+      'JEE Mains Course': '/courses/jee',
+      'MCAT Course': '/courses/mcat'
     }
-    return routeMap[title] || '/subjects'
+    return routeMap[title] || '/courses'
   }
 
   const handleClick = () => {

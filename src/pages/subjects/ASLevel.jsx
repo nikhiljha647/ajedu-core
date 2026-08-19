@@ -30,7 +30,7 @@ const ASLevel = () => {
           <div className="subject-hero-overlay"></div>
           <div className="container">
             <div className="subject-hero-content">
-              <h1 className="subject-hero-title">A/AS Level Tutoring</h1>
+              <h1 className="subject-hero-title">AS/A Level Tutoring</h1>
               <p className="subject-hero-description">
                 Excel in your A/AS Level exams with expert one-on-one tutoring tailored to your exam board and learning style.
               </p>
@@ -45,7 +45,7 @@ const ASLevel = () => {
           <div className="container">
             <div className="subject-content-grid">
               <div className="subject-main">
-                <h2 className="subject-section-title">Why Choose Our A/AS Level Program?</h2>
+                <h2 className="subject-section-title">Why Choose Our AS/A Level Program?</h2>
                 <p className="subject-text">
                   A/AS Levels are crucial qualifications that can determine your university placement and future career path. 
                   Our expert tutors understand the demands of the curriculum and have helped hundreds of students achieve 
@@ -63,7 +63,7 @@ const ASLevel = () => {
 
                 <h3 className="subject-subsection-title">What We Offer</h3>
                 <p className="subject-text">
-                  Our A/AS Level tutoring program is designed to build confidence and competence in your chosen subjects. 
+                  Our AS/A Level tutoring program is designed to build confidence and competence in your chosen subjects. 
                   We focus on understanding core concepts, developing problem-solving skills, and mastering exam techniques 
                   that examiners look for.
                 </p>
@@ -77,7 +77,7 @@ const ASLevel = () => {
                   <div className="info-card">
                     <Users size={32} color="var(--primary-color)" />
                     <h4>Expert Tutors</h4>
-                    <p>Qualified teachers with A/AS Level teaching experience</p>
+                    <p>Qualified teachers with AS/A Level teaching experience</p>
                   </div>
                   <div className="info-card">
                     <Clock size={32} color="var(--primary-color)" />
@@ -116,7 +116,7 @@ const ASLevel = () => {
 
                 <div className="sidebar-card cta-card">
                   <h3>Ready to Start?</h3>
-                  <p>Book your free consultation session today and take the first step toward A/AS Level success.</p>
+                  <p>Book your free consultation session today and take the first step toward AS/A Level success.</p>
                   <Link to="/book-session" className="btn btn-primary btn-full">
                     Get Started
                   </Link>

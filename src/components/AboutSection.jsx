@@ -20,12 +20,12 @@ const AboutSection = () => {
               alt="Students learning together" 
               className="about-image"
             />
-            <div className="about-image-overlay">
+            {/* <div className="about-image-overlay">
               <div className="stats-badge">
                 <div className="badge-number">10+</div>
                 <div className="badge-text">Years Experience</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="about-text-content">

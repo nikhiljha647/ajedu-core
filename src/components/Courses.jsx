@@ -69,7 +69,7 @@ const Courses = () => {
         </div>
 
         <div className="courses-footer">
-          <Link to="/subjects" className="btn btn-primary">
+          <Link to="/courses" className="btn btn-primary">
             View More Courses
           </Link>
         </div>

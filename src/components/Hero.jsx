@@ -27,7 +27,7 @@ const Hero = () => {
               <button onClick={scrollToBooking} className="btn btn-primary">
                 Get Started Today
               </button>
-              <Link to="/subjects" className="btn btn-secondary">
+              <Link to="/courses" className="btn btn-secondary">
                 Explore Services
               </Link>
             </div>

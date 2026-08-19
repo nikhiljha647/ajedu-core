@@ -9,19 +9,19 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Courses', path: '/subjects' },
+    { name: 'Courses', path: '/courses' },
     { name: 'Testimonials', path: '/testimonials' },
     { name: 'Contact Us', path: '/contact' }
   ]
 
   const courseLinks = [
-    { name: 'A/AS Level', path: '/subjects' },
-    { name: 'AP Courses', path: '/subjects' },
-    { name: 'NEET Course', path: '/subjects' },
-    { name: 'CBSE Course', path: '/subjects' },
-    { name: 'IB Course', path: '/subjects' },
-    { name: 'JEE Mains Course', path: '/subjects' },
-    { name: 'IGCSE/GCSE', path: '/subjects' }
+    { name: 'A/AS Level', path: '/courses' },
+    { name: 'AP Courses', path: '/courses' },
+    { name: 'NEET Course', path: '/courses' },
+    { name: 'CBSE Course', path: '/courses' },
+    { name: 'IB Course', path: '/courses' },
+    { name: 'JEE Mains Course', path: '/courses' },
+    { name: 'IGCSE/GCSE', path: '/courses' }
   ]
 
   return (
@@ -88,5 +88,6 @@ const Footer = () => {
     </footer>
   )
 }
+
 
 export default Footer

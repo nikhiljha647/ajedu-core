@@ -6,7 +6,7 @@ import './Subjects.css'
 const Subjects = () => {
   const courses = [
     {
-      title: 'A/AS Level',
+      title: 'AS/A Level',
       description: 'Comprehensive preparation for A-Level and AS-Level examinations across all major subjects.',
       image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070',
       size: 'large'

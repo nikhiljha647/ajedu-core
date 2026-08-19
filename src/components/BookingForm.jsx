@@ -21,7 +21,7 @@ const BookingForm = () => {
 
   // Subject options based on selected course
   const subjectOptions = {
-    'A/AS Level': ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'English Literature', 'Economics', 'Business Studies', 'Computer Science', 'Psychology', 'History', 'Geography'],
+    'AS/A Level': ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'English Literature', 'Economics', 'Business Studies', 'Computer Science', 'Psychology', 'History', 'Geography'],
     'AP Courses': ['AP Calculus AB/BC', 'AP Physics', 'AP Chemistry', 'AP Biology', 'AP English Language', 'AP English Literature', 'AP US History', 'AP World History', 'AP Computer Science', 'AP Statistics'],
     'NEET Course': ['Physics', 'Chemistry', 'Biology', 'All Subjects'],
     'CBSE Course': ['Mathematics', 'Science', 'Physics', 'Chemistry', 'Biology', 'English', 'Social Studies', 'Hindi', 'Accountancy', 'Business Studies', 'Economics'],
@@ -308,7 +308,7 @@ const BookingForm = () => {
                   aria-label="Course"
                 >
                   <option value="">Select a course</option>
-                  <option value="A/AS Level">A/AS Level</option>
+                  <option value="AS/A Level">AS/A Level</option>
                   <option value="AP Courses">AP Courses</option>
                   <option value="NEET Course">NEET Course</option>
                   <option value="CBSE Course">CBSE Course</option>
