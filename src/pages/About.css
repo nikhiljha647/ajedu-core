@@ -89,13 +89,14 @@
 .stat-value {
   font-size: 36px;
   font-weight: 800;
-  color: var(--dark-text);
+  color: var(--primary-color);
   margin-bottom: 8px;
 }
 
 .stat-label {
   font-size: 15px;
-  color: var(--gray-text);
+  color: var(--dark-text);
+  font-weight: 500;
 }
 
 .values-grid {
