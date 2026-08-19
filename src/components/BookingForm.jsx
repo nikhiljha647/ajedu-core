@@ -183,29 +183,56 @@ const BookingForm = () => {
 
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    try {
+      // Prepare form data for Web3Forms
+      const formDataToSend = new FormData()
+      formDataToSend.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY') // Replace with your key
+      formDataToSend.append('subject', 'New Booking Request from AJ Edu Core')
+      formDataToSend.append('from_name', `${formData.firstName} ${formData.lastName}`)
+      formDataToSend.append('First Name', formData.firstName)
+      formDataToSend.append('Last Name', formData.lastName)
+      formDataToSend.append('Email', formData.email)
+      formDataToSend.append('Phone', formData.phone)
+      formDataToSend.append('Course', formData.course)
+      formDataToSend.append('Subjects', formData.subjects.join(', '))
+      formDataToSend.append('Message', formData.message || 'No message provided')
 
-    console.log('Form submitted:', formData)
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-
-    // Reset form after 4 seconds
-    setTimeout(() => {
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        course: '',
-        subjects: [],
-        message: ''
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
       })
-      setErrors({})
-      setTouched({})
-      setIsSubmitted(false)
-      setShowSubjectDropdown(false)
-    }, 4000)
+
+      const data = await response.json()
+
+      if (data.success) {
+        console.log('Form submitted successfully:', formData)
+        setIsSubmitted(true)
+        setIsSubmitting(false)
+
+        // Reset form after 4 seconds
+        setTimeout(() => {
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            course: '',
+            subjects: [],
+            message: ''
+          })
+          setErrors({})
+          setTouched({})
+          setIsSubmitted(false)
+          setShowSubjectDropdown(false)
+        }, 4000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error submitting the form. Please try again.')
+      setIsSubmitting(false)
+    }
   }
 
   return (
