@@ -186,7 +186,7 @@ const BookingForm = () => {
     try {
       // Prepare form data for Web3Forms
       const formDataToSend = new FormData()
-      formDataToSend.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY') // Replace with your key
+      formDataToSend.append('access_key', '922f3745-1a4d-42d1-b5d2-cf8e6bff98ea')
       formDataToSend.append('subject', 'New Booking Request from AJ Edu Core')
       formDataToSend.append('from_name', `${formData.firstName} ${formData.lastName}`)
       formDataToSend.append('First Name', formData.firstName)
