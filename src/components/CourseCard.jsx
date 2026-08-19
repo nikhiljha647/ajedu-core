@@ -13,7 +13,8 @@ const CourseCard = ({ title, image, size = 'medium' }) => {
       'CBSE Course': '/subjects/cbse',
       'IB Course': '/subjects/ib',
       'IGCSE/GCSE': '/subjects/igcse',
-      'JEE Mains Course': '/subjects/jee'
+      'JEE Mains Course': '/subjects/jee',
+      'MCAT Course': '/subjects/mcat'
     }
     return routeMap[title] || '/subjects'
   }

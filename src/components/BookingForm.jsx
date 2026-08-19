@@ -28,6 +28,7 @@ const BookingForm = () => {
     'IB Course': ['IB Mathematics', 'IB Physics', 'IB Chemistry', 'IB Biology', 'IB English', 'IB Economics', 'IB Business Management', 'IB Psychology', 'IB History', 'Extended Essay', 'TOK'],
     'IGCSE/GCSE': ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'English Language', 'English Literature', 'Economics', 'Business Studies', 'Computer Science', 'Geography', 'History'],
     'JEE Mains': ['Physics', 'Chemistry', 'Mathematics', 'All Subjects'],
+    'MCAT Course': ['Biological & Biochemical Foundations', 'Chemical & Physical Foundations', 'Psychological, Social & Biological Foundations', 'Critical Analysis & Reasoning Skills', 'All Sections'],
     'Other': ['General Tutoring', 'Homework Help', 'Test Prep']
   }
 
@@ -314,6 +315,7 @@ const BookingForm = () => {
                   <option value="IB Course">IB Course</option>
                   <option value="IGCSE/GCSE">IGCSE/GCSE</option>
                   <option value="JEE Mains">JEE Mains</option>
+                  <option value="MCAT Course">MCAT Course</option>
                   <option value="Other">Other</option>
                 </select>
               </div>

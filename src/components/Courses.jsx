@@ -36,6 +36,11 @@ const courses = [
     title: 'JEE Mains Course',
     image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070',
     size: 'medium'
+  },
+  {
+    title: 'MCAT Course',
+    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070',
+    size: 'medium'
   }
 ]
 

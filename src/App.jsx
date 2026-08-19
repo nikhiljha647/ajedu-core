@@ -14,6 +14,7 @@ import CBSE from './pages/subjects/CBSE'
 import IB from './pages/subjects/IB'
 import IGCSE from './pages/subjects/IGCSE'
 import JEE from './pages/subjects/JEE'
+import MCAT from './pages/subjects/MCAT'
 
 import './App.css'
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/subjects/ib" element={<IB />} />
         <Route path="/subjects/igcse" element={<IGCSE />} />
         <Route path="/subjects/jee" element={<JEE />} />
+        <Route path="/subjects/mcat" element={<MCAT />} />
       </Routes>
     </div>
   )
