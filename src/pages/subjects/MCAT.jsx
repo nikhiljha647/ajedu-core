@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { CheckCircle, BookOpen, Users, Clock, Award } from 'lucide-react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import './SubjectPage.css'
@@ -32,134 +33,116 @@ const MCAT = () => {
     }
   ]
 
-  const stats = [
-    { label: 'Average Score Improvement', value: '12+' },
-    { label: 'Practice Tests Included', value: '10+' },
-    { label: 'Hours of Content Review', value: '200+' },
-    { label: 'Success Rate', value: '95%' }
-  ]
+  const studyPlans = ['3-Month Intensive', '6-Month Comprehensive', '12-Month Extended', 'Custom Schedule']
 
   return (
-    <div className="subject-page">
+    <>
       <Header />
-
-      {/* Hero Section */}
-      <section className="subject-hero">
-        <div className="hero-overlay"></div>
-        <div className="container">
-          <h1 className="subject-title">MCAT Preparation</h1>
-          <p className="subject-description">
-            Excel in the Medical College Admission Test with expert guidance, comprehensive content review, and proven test strategies
-          </p>
-          <Link to="/book-session" className="btn btn-primary">
-            Start Your MCAT Prep
-          </Link>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="subject-stats">
-        <div className="container">
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-card">
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="subject-content">
-        <div className="container">
-          <div className="content-wrapper">
-            <div className="main-content">
-              <h2>Why Choose Our MCAT Course?</h2>
-              <p>
-                The MCAT is a challenging and comprehensive examination that requires thorough preparation across multiple disciplines. 
-                Our MCAT course is designed by medical school graduates and experienced instructors who understand what it takes to achieve 
-                a competitive score. We provide a structured approach that covers all content areas while developing critical thinking and 
-                test-taking skills essential for MCAT success.
+      <div className="subject-page">
+        <section className="subject-hero">
+          <div className="subject-hero-overlay"></div>
+          <div className="container">
+            <div className="subject-hero-content">
+              <h1 className="subject-hero-title">MCAT Preparation</h1>
+              <p className="subject-hero-description">
+                Excel in the Medical College Admission Test with expert guidance, comprehensive content review, and proven test strategies
               </p>
+              <Link to="/book-session" className="btn btn-primary">
+                Start Your MCAT Prep
+              </Link>
+            </div>
+          </div>
+        </section>
 
-              <div className="features-list">
-                <h3>Course Features</h3>
-                <ul>
+        <section className="section">
+          <div className="container">
+            <div className="subject-content-grid">
+              <div className="subject-main">
+                <h2 className="subject-section-title">Why Choose Our MCAT Course?</h2>
+                <p className="subject-text">
+                  The MCAT is a challenging and comprehensive examination that requires thorough preparation across multiple disciplines. 
+                  Our MCAT course is designed by medical school graduates and experienced instructors who understand what it takes to achieve 
+                  a competitive score. We provide a structured approach that covers all content areas while developing critical thinking and 
+                  test-taking skills essential for MCAT success.
+                </p>
+
+                <div className="features-list">
                   {features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="subjects-covered">
-                <h3>MCAT Sections Covered</h3>
-                <div className="info-cards">
-                  {sections.map((section, index) => (
-                    <div key={index} className="info-card">
-                      <h4>{section.title}</h4>
-                      <ul>
-                        {section.topics.map((topic, idx) => (
-                          <li key={idx}>{topic}</li>
-                        ))}
-                      </ul>
+                    <div key={index} className="feature-item">
+                      <CheckCircle size={20} color="var(--primary-color)" />
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
+
+                <h3 className="subject-subsection-title">What We Offer</h3>
+                <p className="subject-text">
+                  Our comprehensive MCAT preparation program covers all four sections of the exam with equal emphasis on content mastery 
+                  and critical analysis skills. We provide structured lessons, extensive practice materials, and personalized feedback 
+                  to help you achieve your target score.
+                </p>
+
+                <div className="info-cards">
+                  <div className="info-card">
+                    <BookOpen size={32} color="var(--primary-color)" />
+                    <h4>Complete Content Review</h4>
+                    <p>200+ hours of comprehensive content coverage across all MCAT sections</p>
+                  </div>
+                  <div className="info-card">
+                    <Users size={32} color="var(--primary-color)" />
+                    <h4>Expert Instructors</h4>
+                    <p>Tutors with high MCAT scores and medical school experience</p>
+                  </div>
+                  <div className="info-card">
+                    <Clock size={32} color="var(--primary-color)" />
+                    <h4>Practice Tests</h4>
+                    <p>10+ full-length practice tests with detailed performance analysis</p>
+                  </div>
+                  <div className="info-card">
+                    <Award size={32} color="var(--primary-color)" />
+                    <h4>Proven Success</h4>
+                    <p>Average score improvement of 12+ points with our program</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="cta-section">
-                <h3>Ready to Begin Your Medical Journey?</h3>
-                <p>
-                  Join thousands of successful pre-med students who have achieved their MCAT goals with our comprehensive preparation course.
-                </p>
-                <Link to="/book-session" className="btn btn-primary">
-                  Book Your Free Consultation
-                </Link>
+              <div className="subject-sidebar">
+                <div className="sidebar-card">
+                  <h3>MCAT Sections</h3>
+                  <ul className="subjects-list">
+                    <li>Biological & Biochemical Foundations</li>
+                    <li>Chemical & Physical Foundations</li>
+                    <li>Psych/Social/Bio Foundations</li>
+                    <li>Critical Analysis & Reasoning</li>
+                  </ul>
+                </div>
+
+                <div className="sidebar-card">
+                  <h3>Study Plans Available</h3>
+                  <ul className="exam-boards-list">
+                    {studyPlans.map((plan, index) => (
+                      <li key={index}>
+                        <CheckCircle size={16} color="var(--primary-color)" />
+                        {plan}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="sidebar-card cta-card">
+                  <h3>Begin Your Journey</h3>
+                  <p>Book a free consultation and start your MCAT preparation with expert guidance tailored to your goals.</p>
+                  <Link to="/book-session" className="btn btn-primary btn-full">
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </div>
-
-            <aside className="sidebar">
-              <div className="sidebar-card">
-                <h3>MCAT Overview</h3>
-                <ul>
-                  <li><strong>Duration:</strong> 7 hours 30 minutes</li>
-                  <li><strong>Sections:</strong> 4</li>
-                  <li><strong>Score Range:</strong> 472-528</li>
-                  <li><strong>Format:</strong> Computer-based</li>
-                  <li><strong>Frequency:</strong> Multiple times per year</li>
-                </ul>
-              </div>
-
-              <div className="sidebar-card">
-                <h3>Popular Study Plans</h3>
-                <ul>
-                  <li>3-Month Intensive</li>
-                  <li>6-Month Comprehensive</li>
-                  <li>12-Month Extended</li>
-                  <li>Custom Schedule</li>
-                </ul>
-              </div>
-
-              <div className="sidebar-card">
-                <h3>Resources Included</h3>
-                <ul>
-                  <li>Full-length Practice Tests</li>
-                  <li>AAMC Official Materials</li>
-                  <li>Question Banks (2000+)</li>
-                  <li>Flashcards & Study Guides</li>
-                  <li>Video Content Library</li>
-                  <li>One-on-One Tutoring</li>
-                </ul>
-              </div>
-            </aside>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 

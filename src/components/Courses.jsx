@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import CourseCard from './CourseCard'
 import './Courses.css'
 
@@ -8,6 +9,11 @@ const courses = [
     size: 'large'
   },
   {
+    title: 'MCAT Course',
+    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070',
+    size: 'large'
+  },
+  {
     title: 'AP Courses',
     image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070',
     size: 'large'
@@ -15,7 +21,7 @@ const courses = [
   {
     title: 'NEET Course',
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070',
-    size: 'large'
+    size: 'medium'
   },
   {
     title: 'CBSE Course',
@@ -36,15 +42,13 @@ const courses = [
     title: 'JEE Mains Course',
     image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070',
     size: 'medium'
-  },
-  {
-    title: 'MCAT Course',
-    image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070',
-    size: 'medium'
   }
 ]
 
 const Courses = () => {
+  // Show only first 7 courses on home page
+  const displayedCourses = courses.slice(0, 7)
+
   return (
     <section className="courses section">
       <div className="container">
@@ -54,7 +58,7 @@ const Courses = () => {
         </p>
 
         <div className="courses-grid">
-          {courses.map((course, index) => (
+          {displayedCourses.map((course, index) => (
             <CourseCard
               key={index}
               title={course.title}
@@ -62,6 +66,12 @@ const Courses = () => {
               size={course.size}
             />
           ))}
+        </div>
+
+        <div className="courses-footer">
+          <Link to="/subjects" className="btn btn-primary">
+            View More Courses
+          </Link>
         </div>
       </div>
     </section>

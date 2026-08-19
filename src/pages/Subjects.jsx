@@ -12,6 +12,12 @@ const Subjects = () => {
       size: 'large'
     },
     {
+      title: 'MCAT Course',
+      description: 'Complete Medical College Admission Test preparation with comprehensive content review.',
+      image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070',
+      size: 'large'
+    },
+    {
       title: 'AP Courses',
       description: 'Advanced Placement courses covering all subjects with college-level curriculum.',
       image: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=2070',

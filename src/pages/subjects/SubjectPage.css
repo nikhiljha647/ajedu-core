@@ -35,6 +35,7 @@
   font-size: 52px;
   font-weight: 800;
   margin-bottom: 24px;
+  color: var(--white);
 }
 
 .subject-hero-description {
@@ -42,6 +43,44 @@
   line-height: 1.7;
   margin-bottom: 36px;
   opacity: 0.95;
+  color: var(--white);
+}
+
+.subject-stats {
+  background: var(--light-bg);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--gray-text);
+  font-weight: 500;
 }
 
 .subject-content-grid {
@@ -77,18 +116,32 @@
 }
 
 .features-list {
+  margin: 32px 0;
+}
+
+.features-list h3 {
+  margin-bottom: 24px;
+}
+
+.features-list ul {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin: 20px 0;
+  gap: 16px;
 }
 
 .feature-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   font-size: 16px;
   color: var(--dark-text);
+  line-height: 1.6;
+}
+
+.feature-item svg {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .info-cards {
@@ -180,11 +233,32 @@
   color: var(--white);
 }
 
+.cta-card .subjects-list li {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
 .cta-card p {
   font-size: 15px;
   line-height: 1.6;
   margin-bottom: 20px;
   opacity: 0.95;
+}
+
+.cta-section {
+  margin-top: 48px;
+  padding: 40px;
+  background: var(--light-bg);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.cta-section h3 {
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  margin-bottom: 28px;
 }
 
 .btn-full {
@@ -203,6 +277,10 @@
 
   .info-cards {
     grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -230,6 +308,11 @@
 
   .subject-subsection-title {
     font-size: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 
